@@ -1,6 +1,128 @@
+<!DOCTYPE html>
 <html>
     <title>TaurusOx</title>
-    <body>
-        Welcome to TaurusOx!    
+    <link rel="stylesheet" href="css\bootstrap.css">
+    <style>
+        h1,
+h3 {
+  text-align: center;
+}
+
+.logoDescription {
+  text-align: center;
+}
+
+.motiveContainer {
+  width: 300px;
+  height: 70px;
+  
+  margin: 0 auto;
+}
+
+.buttonLaunch {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+}
+        #videoTaurus{
+            position: fixed; 
+            right: 0; 
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            width: auto; 
+            height: auto; 
+            z-index: -1000;
+           /*background: url(images/torre.jpg) no-repeat;*/
+            background-size: cover; 
+        }
+
+        /* DEMO-SPECIFIC STYLES */
+        .typewriter h1 {
+        color: #fff;
+        font-family: monospace;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .10em; /* Adjust as needed */
+        animation: 
+            typing 3.5s steps(10, end),
+            blink-caret .5s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 20% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+    </style>
+    <script src="\js\bootstrap.js"></script>
+    <body> 
+        <div class="container">
+            <!-- <nav class="navbar navbar-light bg-light" style="background:transparent!important;">
+                <a class="navbar-brand" href="#">
+                    <img src="\imgs\logo_white.png" width="150" height="150" alt="">
+                </a>
+            </nav>  -->
+            
+            <div class="logoDescription" style="margin-top: 5%;">
+                <!-- <h4 style="color:white;">Monitoring system and air purifier</h4> -->
+                <img src="\imgs\logo_min_white.png"  alt="">
+                
+            <div class="blue-square"></div>
+            </div>
+
+            <div class="motiveContainer">
+                <div class="typewriter">
+                    <h1>Breathe Easy</h1>
+                  </div>
+              </div> 
+            </div>
+
+            <div class="buttonLaunch">
+                <button class="btn btn-primary">Launch Now</button>
+            </div>
+          <!-- <div class="row" style="margin-bottom:15%;">
+           
+          </div> 
+          <div class="row">
+              <div class="col-md-4">
+    
+              </div>  
+              <div class="col-md-4">
+                
+                <img src="\imgs\logo_white.png" width="400" height="400" alt="">
+                <p style="color:white;">Monitoring system and air purifier</p>
+                <div class="row" style="margin-bottom:10%;">
+                    <div class="typewriter">
+                        <h1>Breathe Easy</h1>
+                      </div>
+                  </div>  
+                  <button class="btn btn-primary">Launch Now</button>
+                </div>
+                <div class="row">
+                </div> -->
+              
+              <!-- <div class="col-md-4">
+    
+            </div>   -->
+    
+          </div>
+            <video id="videoTaurus" autoplay muted loop>
+                <source src="\videos\backgroundVideo.mp4" type="video/mp4"> 
+                    
+            </video>
+    
+        </div>
+      
     </body>
 </html>
