@@ -57,7 +57,7 @@ var myChart = new Chart(ctx, {
 var myChart3 = new Chart(ctx3, {
     type: 'doughnut',
     data: {
-        labels: ["Co2",	"Amonia",	"Benzene",	"Nitric", "Alcohol"],
+        labels: ["Benzene",	"Nitric", "Alcohol"],
         datasets: [{    
             data: [500,	50,	 1212], // Specify the data values array
           
