@@ -59,10 +59,10 @@ var myChart3 = new Chart(ctx3, {
     data: {
         labels: ["Co2",	"Amonia",	"Benzene",	"Nitric", "Alcohol"],
         datasets: [{    
-            data: [500,	50,	2424,	14040, 1212], // Specify the data values array
+            data: [500,	50,	 1212], // Specify the data values array
           
-            borderColor: ['#FF5733', '#FFC300', '#DAF7A6', '#C70039', '#00C72B'], // Add custom color border 
-            backgroundColor: ['#FF5733', '#FFC300', '#DAF7A6', '#C70039', '#00C72B'], // Add custom color background (Points and Fill)
+            borderColor: ['#FF5733', '#FFC300',  '#00C72B'], // Add custom color border 
+            backgroundColor: ['#FF5733', '#FFC300',  '#00C72B'], // Add custom color background (Points and Fill)
             borderWidth: 1 // Specify bar border width
         }]},         
     options: {
