@@ -1,20 +1,77 @@
 window.onload = function(){
+  var ctx = document.getElementById("room3chart").getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["6:00AM",	"7:00AM",	"8:00AM",	"9:00AM",	"10:00AM",	"11:00AM",	"12:00PM","1:00PM",	"2:00PM","3:00PM"],
+      datasets: [{
+            label: 'Co2 Levels', // Name the series
+            data: [232,	1232,	4545,	232,	1123,	7677,	123,	12,	4, 123], // Specify the data values array
+            fill: false,
+            borderColor: '#FF5733', // Add custom color border (Line)
+            backgroundColor: '#FF5733', // Add custom color background (Points and Fill)
+            borderWidth: 1 // Specify bar border width
+        },
+                  {
+            label: 'Ammonia Levels', // Name the series
+            data: [11,	222,	334,	55,	23,	242,	1417,	55024,	12, 2], // Specify the data values array
+            fill: false,
+            borderColor: '#FFC300', // Add custom color border (Line)
+            backgroundColor: '#FFC300', // Add custom color background (Points and Fill)
+            borderWidth: 1 // Specify bar border width
+        },
+        {
+          label: 'Benzene Levels', // Name the series
+          data: [1321,	23,	233,	23,	123,	123,	33,	33,	12, 1], // Specify the data values array
+          fill: false,
+          borderColor: '#DAF7A6', // Add custom color border (Line)
+          backgroundColor: '#DAF7A6', // Add custom color background (Points and Fill)
+          borderWidth: 1 // Specify bar border width
+      },
+      {
+        label: 'Nitric Oxide Levels', // Name the series
+        data: [123,	55,	44,	33,	2,	12,	23,	23,	11, 32], // Specify the data values array
+        fill: false,
+        borderColor: '#C70039', // Add custom color border (Line)
+        backgroundColor: '#C70039', // Add custom color background (Points and Fill)
+        borderWidth: 1 // Specify bar border width
+    },
+    {
+      label: 'Alcohol Levels', // Name the series
+      data: [123,	32,	12,	321,	44,	23,	1233,	123,	1233, 2], // Specify the data values array
+      fill: false,
+      borderColor: '#00C72B', // Add custom color border (Line)
+      backgroundColor: '#00C72B', // Add custom color background (Points and Fill)
+      borderWidth: 1 // Specify bar border width
+  }]
+    },
+    options: {
+      responsive: true, // Instruct chart js to respond nicely.
+      maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+    }
+});
+
     var ctx3 = document.getElementById("indicadores").getContext('2d');
 
 var myChart3 = new Chart(ctx3, {
     type: 'doughnut',
     data: {
-        labels: ["Zas",	"Amonia",	"Co2",	"Origênio"],
+        labels: ["Co2",	"Amonia",	"Benzene",	"Nitric", "Alcohol"],
         datasets: [{    
-            data: [500,	50,	2424,	14040], // Specify the data values array
+            data: [9889,	123,	323,	121, 22], // Specify the data values array
           
-            borderColor: ['#2196f38c', '#f443368c', '#3f51b570', '#00968896'], // Add custom color border 
-            backgroundColor: ['#2196f38c', '#f443368c', '#3f51b570', '#00968896'], // Add custom color background (Points and Fill)
+            borderColor: ['#FF5733', '#FFC300', '#DAF7A6', '#C70039', '#00C72B'], // Add custom color border 
+            backgroundColor: ['#FF5733', '#FFC300', '#DAF7A6', '#C70039', '#00C72B'], // Add custom color background (Points and Fill)
             borderWidth: 1 // Specify bar border width
         }]},         
     options: {
       responsive: true, // Instruct chart js to respond nicely.
       maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+      title: {
+        display: true,
+        text: "Analysis Air"
+      },
     }
 });
 
@@ -36,7 +93,7 @@ var chartColors = {
   var myBar = new Chart(ctx4, {
     type: 'bar',
     data: {
-      labels: ["Car", "Bike", "Walking"],
+      labels: ["Ammonia", "Origen", "Benzene"],
       datasets: [{
         label: 'Fuel',
         backgroundColor: [
@@ -53,7 +110,7 @@ var chartColors = {
     options: {
       title: {
         display: true,
-        text: "Chart.js - Different Bar Colors"
+        text: "Ammount of day"
       },
       tooltips: {
         mode: 'index',
