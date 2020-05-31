@@ -93,7 +93,7 @@ var chartColors = {
   var myBar = new Chart(ctx4, {
     type: 'bar',
     data: {
-      labels: ["Ammonia", "Origen", "Benzene"],
+      labels: ["Ammonia", "Oxygen", "Benzene"],
       datasets: [{
         label: 'Fuel',
         backgroundColor: [

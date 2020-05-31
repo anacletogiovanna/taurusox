@@ -13,7 +13,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="../js/graphDashbord.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/aws-sdk-2.686.0.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.686.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <body style="background-color:#293241;">
 
           <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
@@ -60,6 +62,11 @@
                       <a class="nav-link" href="/views/room2.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                         Room 3
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/views/technicalInformation.html">
+                        Did you like the project? Come and find out more about us! 😁🚀🖖
                       </a>
                     </li>
                   </ul>
@@ -111,40 +118,39 @@
     </body>
 
     <script>
-      window.onload = function(){
+     function vaiDarCerto(){
+       console.log("testando com a testa");
 
-        console.log('Oi');
+      AWS.config.update({
+        region: "us-west-2",
+        endpoint: 'http://127.0.0.1:5500/',
+        // accessKeyId default can be used while using the downloadable version of DynamoDB. 
+        // For security reasons, do not store AWS Credentials in your files. Use Amazon Cognito instead.
+        accessKeyId: "AKIAX7NYXSQPJKRBRCWF",
+        // secretAccessKey default can be used while using the downloadable version of DynamoDB. 
+        // For security reasons, do not store AWS Credentials in your files. Use Amazon Cognito instead.
+        secretAccessKey: "2nDMWlg15sAqiHIvJIHj7xLF60h8dtfjm/vS/xzS"
+      });
 
-       // var AWS = require("aws-sdk");
+      var params = {
+        TableName: 'Table',
+        IndexName: 'Index',
+        KeyConditionExpression: 'HashKey = :hkey and RangeKey > :rkey',
+        ExpressionAttributeValues: {
+          ':hkey': 'key',
+          ':rkey': 2015
+        }
+      };
 
-        AWS.config.update({
-          region: "us-west-2",
-          endpoint: "http://taurusox.us",
-          accessKeyId: "AKIAX7NYXSQPPGKVRYHN",
-          secretAccessKey: "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"
-        });
-
-        var docClient = new AWS.DynamoDB.DocumentClient();
-
-        console.log("Agora vai que Deus é pai.");
-
-        var params = {
-            TableName : "TaurusOx_Sensors",
-         
-        };
-
-        docClient.query(params, function(err, data) {
-            if (err) {
-                console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
-            } else {
-                console.log("Query succeeded.");
-                data.Items.forEach(function(item) {
-                    console.log(item);
-                });
-            }
-        });
-
-      }
+      var documentClient = new AWS.DynamoDB.DocumentClient();
+      
+      documentClient.query(params, function(err, data) {
+        if (err) console.log(err);
+        else console.log(data);
+      });
+     }
+      
+      vaiDarCerto();
         
     </script>
 </html>
