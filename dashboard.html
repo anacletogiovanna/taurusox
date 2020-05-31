@@ -15,13 +15,14 @@
     <body style="background-color:#293241;">
 
 
+
         <nav class="navbar navbar-dark bg-dark" style="background:transparent!important;">
             <a class="navbar-brand" href="#">
                 <img src="/imgs/logo_white_name.png" width="150" height="50" alt="">
               </a>
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button> -->
+            </button>
             <div class="collapse navbar-collapse" id="navbarText">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -39,41 +40,79 @@
               </span>
             </div>
           </nav>
+
 <div class="container">
     <!-- <nav class="navbar navbar-dark bg-dark" style="background:transparent!important;">
         <a class="navbar-brand" href="#">
           <img src="/imgs/logo_white_name.png" width="150" height="50" alt="">
         </a>
     </nav> -->
-    <div class="row" style="margin-bottom:10%;margin-top:5%;">
-        <div class="col-md-12">
-             <h3 style="color:white;text-align: center;">Data series of the sensors</h3>
-        </div>     
-     </div>
+  
+<div class="row" style="margin-bottom:5%;margin-top:5%;">
+    <div class="col-md-12">
+         <h3 style="color:white;text-align: center;">Time Series Sensors</h3>
+         <p style="color:white;text-align: center;">Representação dos dados, somente</p>
+    </div>     
+ </div>
+</div>
+<div class="row" style="margin-left: 5%;">
+   <div class="col-md-6">
+    <div class="chart-container" style="position: relative; height:40vh; width:40vw">
+        <canvas id="sensor1"></canvas>
+    </div>
+   </div> 
+   
+   <div class="col-md-6">
+    <div class="chart-container" style="position: relative; height:40vh; width:40vw">
+        <canvas id="sensor2"></canvas>
+    </div>
+   </div>
+
 </div>
 
-        <div class="row" style="margin-left: 5%;">
-           <div class="col-md-6">
-            <div class="chart-container" style="position: relative; height:40vh; width:40vw">
-                <canvas id="sensor1"></canvas>
-            </div>
-           </div> 
-           
-           <div class="col-md-6">
-            <div class="chart-container" style="position: relative; height:40vh; width:40vw">
-                <canvas id="sensor2"></canvas>
-            </div>
-           </div>
+<div class="row" style="margin-top:5%; margin-left: 5%;">
+    <div class="col-md-6">
+     <div class="chart-container" style="position: relative; height:40vh; width:40vw">
+         <canvas id="sensor3"></canvas>
+     </div>
+    </div> 
+    
+    <div class="col-md-6">
+     <div class="chart-container" style="position: relative; height:40vh; width:40vw">
+         <canvas id="sensor4"></canvas>
+     </div>
+    </div>
+ 
+ </div>
 
+
+<div class="row" style="margin-bottom:5%;margin-top:5%;">
+    <div class="col-md-12">
+         <h3 style="color:white;text-align: center;">Níveis do ar</h3>
+         <p style="color:white;text-align: center;">Representação dos dados, somente</p>
+    </div>     
+ </div>
+</div>
+
+
+        <div class="row" style="margin-bottom: 5%;">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-4">
+            <div class="chart-container" style="position: relative; height:40vh; width:40vw">
+                <canvas id="indicadores"></canvas>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <canvas id="barchart"></canvas>
+            </div>
         </div>
 
-        <div class="row">
-           <div class="col-md-4">
-            <div class="chart-container" style="position: relative; height:40vh; width:40vw">
-                <canvas id="sensor3"></canvas>
-            </div>
-           </div>
-        </div>
+        <hr>
+
+    
+    
 
         <div class="chart-container" style="position: relative; height:40vh; width:40vw">
             <canvas id="sensor4"></canvas>
