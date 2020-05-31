@@ -62,7 +62,7 @@ var myChart3 = new Chart(ctx3, {
             data: [500,	2343, 1212], // Specify the data values array
           
             borderColor: ['#FF5733',  '#C70039', '#00C72B'], // Add custom color border 
-            backgroundColor: ['#FF5733', , '#C70039', '#00C72B'], // Add custom color background (Points and Fill)
+            backgroundColor: ['#FF5733', '#C70039', '#00C72B'], // Add custom color background (Points and Fill)
             borderWidth: 1 // Specify bar border width
         }]},         
     options: {
