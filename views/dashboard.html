@@ -118,39 +118,39 @@
     </body>
 
     <script>
-     function vaiDarCerto(){
-       console.log("testando com a testa");
+    //  function vaiDarCerto(){
+    //    console.log("testando com a testa");
 
-      AWS.config.update({
-        region: "us-west-2",
-        endpoint: 'http://127.0.0.1:5500/',
+    //   AWS.config.update({
+    //     region: "us-west-2",
+    //     endpoint: 'http://127.0.0.1:5500/',
         // accessKeyId default can be used while using the downloadable version of DynamoDB. 
         // For security reasons, do not store AWS Credentials in your files. Use Amazon Cognito instead.
-        accessKeyId: "AKIAX7NYXSQPJKRBRCWF",
+      //  accessKeyId: "AKIAX7NYXSQPJKRBRCWF",
         // secretAccessKey default can be used while using the downloadable version of DynamoDB. 
         // For security reasons, do not store AWS Credentials in your files. Use Amazon Cognito instead.
-        secretAccessKey: "2nDMWlg15sAqiHIvJIHj7xLF60h8dtfjm/vS/xzS"
-      });
+    //     secretAccessKey: "2nDMWlg15sAqiHIvJIHj7xLF60h8dtfjm/vS/xzS"
+    //   });
 
-      var params = {
-        TableName: 'Table',
-        IndexName: 'Index',
-        KeyConditionExpression: 'HashKey = :hkey and RangeKey > :rkey',
-        ExpressionAttributeValues: {
-          ':hkey': 'key',
-          ':rkey': 2015
-        }
-      };
+    //   var params = {
+    //     TableName: 'Table',
+    //     IndexName: 'Index',
+    //     KeyConditionExpression: 'HashKey = :hkey and RangeKey > :rkey',
+    //     ExpressionAttributeValues: {
+    //       ':hkey': 'key',
+    //       ':rkey': 2015
+    //     }
+    //   };
 
-      var documentClient = new AWS.DynamoDB.DocumentClient();
+    //   var documentClient = new AWS.DynamoDB.DocumentClient();
       
-      documentClient.query(params, function(err, data) {
-        if (err) console.log(err);
-        else console.log(data);
-      });
-     }
+    //   documentClient.query(params, function(err, data) {
+    //     if (err) console.log(err);
+    //     else console.log(data);
+    //   });
+    //  }
       
-      vaiDarCerto();
+    //   vaiDarCerto();
         
     </script>
 </html>
