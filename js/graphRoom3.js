@@ -110,7 +110,7 @@ var chartColors = {
     options: {
       title: {
         display: true,
-        text: "Ammount of day"
+        text: "Ammount of the day"
       },
       tooltips: {
         mode: 'index',
